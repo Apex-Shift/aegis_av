@@ -1,3 +1,6 @@
+
+<img width="997" height="682" alt="Sans titre" src="https://github.com/user-attachments/assets/8f61abe5-2cac-4502-9c23-d702a3631e34" />
+
 # AegisAV - Advanced Python Security Suite (Experimental)
 
 **AegisAV** is an expert-level, modular antivirus built with Python. It features a multi-layered detection engine combining local hash matching, YARA static rule analysis, and cloud threat intelligence feeds (MalwareBazaar & VirusTotal), wrapped inside a modern, dark-themed GUI inspired by commercial security solutions.
@@ -36,17 +39,16 @@
 Bash
 
 
-pip install -r requirements.txt
-Configure environment variables:
-Create a .env file at the root directory and add your VirusTotal API key:
+* pip install -r requirements.txt
+* Configure environment variables:
+* Create a .env file at the root directory and add your VirusTotal API key:
 
  
 
 
-VIRUSTOTAL_API_KEY=your_api_key_here
-Run the application:
+* VIRUSTOTAL_API_KEY=your_api_key_here
+*Run the application:
 
-Bash
+* Bash
 
-
-python main.py
+* python main.py
