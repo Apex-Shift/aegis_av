@@ -1,7 +1,7 @@
 
 <img width="997" height="682" alt="Sans titre" src="https://github.com/user-attachments/assets/8f61abe5-2cac-4502-9c23-d702a3631e34" />
 
-# AegisAV - Advanced Python Security Suite (Experimental)
+# 🛡️ AegisAV - Advanced Python Security Suite (Experimental)
 
 **AegisAV** is an expert-level, modular antivirus built with Python. It features a multi-layered detection engine combining local hash matching, YARA static rule analysis, and cloud threat intelligence feeds (MalwareBazaar & VirusTotal), wrapped inside a modern, dark-themed GUI inspired by commercial security solutions.
 
@@ -26,29 +26,58 @@
 
 ---
 
+## 📂 Project Structure
+
+```text
+aegis_av/
+│
+├── data/
+│   └── base_virale.json       # Local database with known malware hashes
+│
+├── src/
+│   ├── __init__.py            # Makes the src directory a package
+│   ├── moteur.py              # Core scanning logic and file traversal
+│   ├── base_donnees.py        # Local signature management and updates
+│   ├── api_cloud.py           # Cloud intelligence integration (VirusTotal & MalwareBazaar)
+│   └── quarantaine.py         # Secure AES encrypted file isolation
+│
+├── tests/
+│   └── test_scanner.py        # Automated test suites for core modules
+│
+├── .env                       # Secret environment variables (API Keys)
+├── .gitignore                 # Prevents sensitive files and quarantine from being pushed
+├── main.py                    # Main application entry point
+└── requirements.txt           # Python dependency manifest
+```
+
+---
+
 ## 🛠️ Installation & Setup
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/aegis_av.git](https://github.com/your-username/aegis_av.git)
+   git clone https://github.com
    cd aegis_av
+   ```
 
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## Install dependencies:
+3. **Configure environment variables:**
+   Create a `.env` file at the root directory and add your VirusTotal API key:
+   ```env
+   VIRUSTOTAL_API_KEY=your_api_key_here
+   ```
 
-Bash
+4. **Run the application:**
+   ```bash
+   python main.py
+   ```
 
+---
 
-* pip install -r requirements.txt
-* Configure environment variables:
-* Create a .env file at the root directory and add your VirusTotal API key:
+## 🤝 Contributing
 
- 
-
-
-* VIRUSTOTAL_API_KEY=your_api_key_here
-*Run the application:
-
-* Bash
-
-* python main.py
+Contributions are welcome! Since **AegisAV** is an educational and experimental project, feel free to open an issue or submit a pull request to add new features (e.g., custom YARA rules, performance optimizations, or GUI enhancements).
